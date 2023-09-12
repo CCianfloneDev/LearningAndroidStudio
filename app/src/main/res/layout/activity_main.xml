@@ -4,15 +4,159 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D3D1D1"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/btn_calculate_add"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="33dp"
+        android:backgroundTint="#757474"
+        android:fontFamily="monospace"
+        android:text="@string/add"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/text_output_label"
+        app:layout_constraintEnd_toStartOf="@+id/btn_calculate_subtract"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calculate_avg" />
+
+    <Button
+        android:id="@+id/btn_calculate_subtract"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="33dp"
+        android:backgroundTint="#757474"
+        android:fontFamily="monospace"
+        android:text="@string/subtract"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/text_output_label"
+        app:layout_constraintEnd_toStartOf="@+id/btn_calculate_divide"
+        app:layout_constraintStart_toEndOf="@+id/btn_calculate_add"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calculate_std" />
+
+    <Button
+        android:id="@+id/btn_calculate_divide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginBottom="315dp"
+        android:backgroundTint="#757474"
+        android:fontFamily="monospace"
+        android:text="@string/divide"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_calculate_subtract"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calculate_std"
+        app:layout_constraintVertical_bias="0.444" />
+
+    <Button
+        android:id="@+id/btn_calculate_std"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#757474"
+        android:fontFamily="monospace"
+        android:text="@string/standard_deviation"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_calculate_avg"
+        app:layout_constraintTop_toBottomOf="@+id/edit_number" />
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="@string/hello_pdev04_class"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <EditText
+        android:id="@+id/edit_number"
+        android:layout_width="202dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="465dp"
+        android:autofillHints="Eg. 420, 69, 12, 5"
+        android:hint="@string/eg_420_69_12_5"
+        android:backgroundTint="#000000"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:digits="0123456789.,"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_label" />
+
+    <TextView
+        android:id="@+id/text_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="211dp"
+        android:layout_marginBottom="6dp"
+        android:text="@string/enter_a_number"
+        app:layout_constraintBottom_toTopOf="@+id/edit_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_title" />
+
+    <Button
+        android:id="@+id/btn_calculate_avg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#757474"
+        android:fontFamily="monospace"
+        android:text="@string/average"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/btn_calculate_std"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_number" />
+
+    <TextView
+        android:id="@+id/text_output_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="258dp"
+        android:layout_marginBottom="280dp"
+        android:fontFamily="monospace"
+        android:text="@string/output"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_output"
+        android:layout_width="216dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="279dp"
+        android:fontFamily="monospace"
+        android:text="@string/_00_00"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_output_label"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calculate_subtract" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

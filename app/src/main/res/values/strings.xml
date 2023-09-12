@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">SelfDirectedLearningProject</string>
+    <string name="hello_pdev04_class">Hello PDEV04 class!</string>
+    <string name="enter_a_number">Enter a list of numbers separated by comma:</string>
+    <string name="average">Average</string>
+    <string name="add">Add</string>
+    <string name="subtract">Subtract</string>
+    <string name="divide">Divide</string>
+    <string name="standard_deviation">Standard Deviation</string>
+    <string name="eg_420_69_12_5">Eg. 420, 69, 12, 5</string>
+    <string name="at_least_two_valid_numbers_are_required_to_calculate_standard_deviation">At least two valid numbers are required to calculate standard deviation</string>
+    <string name="NaN">NaN</string>
+    <string name="output">Output:</string>
+    <string name="_00_00">00.00</string>
 </resources>
